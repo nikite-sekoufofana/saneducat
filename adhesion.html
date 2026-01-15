@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adhésion | SANEDUCAT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="images/logo.png" alt="SANEDUCAT">
+    <span>SANEDUCAT</span>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="actions.html">Nos actions</a>
+    <a href="adhesion.html" class="active">Adhésion</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="btn-donate">Faire un don</a>
+  </nav>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+</header>
+
+<section class="hero-detail">
+  <h1>Procédure officielle d’adhésion</h1>
+  <p>Rejoignez SANEDUCAT et contribuez à nos actions en faveur du développement durable.</p>
+</section>
+
+<section class="detail-content">
+
+  <div class="detail-block">
+    <h2>Article 1 – Conditions d’adhésion</h2>
+    <p>
+      L’adhésion à l’ONG est ouverte à toute personne physique ou morale
+      qui partage les valeurs, les objectifs et la vision de l’organisation,
+      et qui s’engage à respecter ses statuts et son règlement intérieur.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h2>Article 2 – Types de membres</h2>
+    <ul class="detail-list">
+      <li>Membre adhérent</li>
+      <li>Membre actif / bénévole</li>
+      <li>Membre bienfaiteur</li>
+      <li>Membre d’honneur (le cas échéant)</li>
+    </ul>
+    <p>
+      Chaque membre bénéficie de droits et est soumis à des obligations
+      définis par les statuts de l’ONG.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h2>Article 3 – Dossier de demande d’adhésion</h2>
+    <ul class="detail-list">
+      <li>Formulaire d’adhésion dûment rempli</li>
+      <li>Copie d’une pièce d’identité valide</li>
+      <li>Photo d’identité</li>
+      <li>Coordonnées complètes (adresse, téléphone, e-mail)</li>
+      <li>CV ou lettre de motivation (pour les bénévoles actifs)</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h2>Article 4 – Cotisation</h2>
+    <p>
+      L’adhésion est soumise au paiement d’une cotisation, dont le montant
+      et la périodicité sont fixés par les statuts de l’ONG.
+      La cotisation est payable après acceptation de la demande.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h2>Article 5 – Examen et validation</h2>
+    <p>
+      Le dossier est examiné par le Bureau exécutif de l’ONG.
+      La décision est communiquée au demandeur dans un délai raisonnable.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h2>Article 6 – Confirmation de l’adhésion</h2>
+    <ul class="detail-list">
+      <li>Inscription officielle dans le registre de l’ONG</li>
+      <li>Confirmation d’adhésion délivrée</li>
+      <li>Carte de membre remise, le cas échéant</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h2>Article 7 – Engagement du membre</h2>
+    <ul class="detail-list">
+      <li>Respecter les statuts et le règlement intérieur</li>
+      <li>Contribuer au bon fonctionnement de l’ONG</li>
+      <li>Promouvoir les valeurs et l’image de SANEDUCAT</li>
+    </ul>
+  </div>
+
+  <div class="detail-block highlight">
+    <h2>Article 8 – Perte de la qualité de membre</h2>
+    <ul class="detail-list">
+      <li>Démission volontaire</li>
+      <li>Non-paiement de la cotisation</li>
+      <li>Manquement grave aux règles</li>
+      <li>Décision motivée du Bureau exécutif</li>
+    </ul>
+  </div>
+
+  <!-- FORMULAIRE -->
+  <form class="form-adhesion" action="sendmail.php" method="post">
+
+  <div class="form-group">
+    <label>Nom et prénom</label>
+    <input type="text" name="nom" placeholder="Votre nom complet" required>
+  </div>
+
+  <div class="form-group">
+    <label>Adresse e-mail</label>
+    <input type="email" name="email" placeholder="exemple@email.com" required>
+  </div>
+
+  <div class="form-group">
+    <label>Téléphone</label>
+    <input type="tel" name="telephone" placeholder="+224 ..." required>
+  </div>
+
+  <div class="form-group">
+    <label>Type de membre</label>
+    <select name="type_membre" required>
+      <option value="">Choisir une option</option>
+      <option>Membre adhérent</option>
+      <option>Membre actif / bénévole</option>
+      <option>Membre bienfaiteur</option>
+      <option>Membre d’honneur</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Lettre de motivation (si nécessaire)</label>
+    <textarea name="message" placeholder="Expliquez votre motivation..."></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary btn-submit">
+    Envoyer la demande
+  </button>
+
+  </form>
+
+  <p class="form-success" style="display:none;">
+    Votre message a bien été envoyé.  
+    Nous vous répondrons dans les plus brefs délais.
+  </p>
+
+</section>
+
+<script src="js/main.js"></script>
+
+<footer class="footer">
+  <p>
+    © <span id="year"></span> SANEDUCAT – Tous droits réservés.
+  </p>
+</footer>
+
+</body>
+</html>
