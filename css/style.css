@@ -152,7 +152,7 @@ body {
   }
 }
 
-/* HERO ACTIONS */
+/* HERO ACTIONS*/ 
 .hero-actions {
   padding: 160px 20px 80px;
   text-align: center;
@@ -244,7 +244,8 @@ body {
   }
 }
 
-/* HERO DETAIL */
+
+/* HERO DETAIL*/ 
 .hero-detail {
   padding: 160px 20px 80px;
   background: #e9f6ef;
@@ -517,5 +518,118 @@ body {
   }
 }
 
+/* =========================
+   ACCUEIL — HERO (charte)
+   ========================= */
+
+.home .hero {
+  position: relative;
+  min-height: 80vh;
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 160px 40px 100px;
+}
+
+.home .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.home .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.home .hero h1 {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 600px;
+  text-transform: uppercase;
+}
+
+.home .hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Boutons — animations */
+.home .hero .btn-primary,
+.home .hero .btn-donate {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* NOS PROGRAMMES */
+.home .hero .btn-primary {
+  background: #1e8f4f;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.home .hero .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* MERCI DE FAIRE UN DON */
+.home .hero .btn-donate {
+  background: #f39c12;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.home .hero .btn-donate:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(243,156,18,0.45);
+}
+/*NOS PROGRAMMES ET MERCI DE FAIRE UN DON*/
+.home .hero .btn-primary,
+.home .hero .btn-donate {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 14px 28px;
+  border-radius: 6px;
+}
+
+/* Désactiver le soulignement des boutons du hero */
+.home .hero a {
+  text-decoration: none;
+}
+
+.home .hero a::after {
+  display: none;
+}
+
+
+
+/* RESPONSIVE ACCUEIL */
+@media (max-width: 768px) {
+  .home .hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+
+  .home .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 
